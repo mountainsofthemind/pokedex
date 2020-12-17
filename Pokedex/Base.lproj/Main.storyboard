@@ -33,6 +33,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Pokedex" id="Biv-7m-pIx"/>
                     <connections>
+                        <outlet property="pokemonTableView" destination="Cqa-zC-YKo" id="NWj-dM-d8q"/>
                         <segue destination="Pbc-lN-dAd" kind="show" identifier="moveToPokemonDetail" id="qxK-8b-o7V"/>
                     </connections>
                 </tableViewController>

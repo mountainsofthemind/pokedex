@@ -14,6 +14,8 @@
 		CD3A9B462586C4A20040AB22 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD3A9B442586C4A20040AB22 /* LaunchScreen.storyboard */; };
 		CD3A9B502586C85A0040AB22 /* PokemonTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD3A9B4F2586C85A0040AB22 /* PokemonTableViewController.swift */; };
 		CD40CE9A2586D6B500C34066 /* PokemonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD40CE992586D6B500C34066 /* PokemonDetailViewController.swift */; };
+		CD458FFE25882B7A001E5F78 /* NetworkingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD458FFD25882B7A001E5F78 /* NetworkingManager.swift */; };
+		CD5877732587A56F002510CC /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD5877722587A56E002510CC /* Pokemon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		CD3A9B472586C4A20040AB22 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CD3A9B4F2586C85A0040AB22 /* PokemonTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonTableViewController.swift; sourceTree = "<group>"; };
 		CD40CE992586D6B500C34066 /* PokemonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonDetailViewController.swift; sourceTree = "<group>"; };
+		CD458FFD25882B7A001E5F78 /* NetworkingManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingManager.swift; sourceTree = "<group>"; };
+		CD5877722587A56E002510CC /* Pokemon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				CD3A9B422586C4A20040AB22 /* Assets.xcassets */,
 				CD3A9B442586C4A20040AB22 /* LaunchScreen.storyboard */,
 				CD3A9B472586C4A20040AB22 /* Info.plist */,
+				CD5877722587A56E002510CC /* Pokemon.swift */,
+				CD458FFD25882B7A001E5F78 /* NetworkingManager.swift */,
 			);
 			path = Pokedex;
 			sourceTree = "<group>";
@@ -140,8 +146,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD5877732587A56F002510CC /* Pokemon.swift in Sources */,
 				CD3A9B502586C85A0040AB22 /* PokemonTableViewController.swift in Sources */,
 				CD40CE9A2586D6B500C34066 /* PokemonDetailViewController.swift in Sources */,
+				CD458FFE25882B7A001E5F78 /* NetworkingManager.swift in Sources */,
 				CD3A9B3A2586C4A00040AB22 /* AppDelegate.swift in Sources */,
 				CD3A9B3C2586C4A00040AB22 /* SceneDelegate.swift in Sources */,
 			);
