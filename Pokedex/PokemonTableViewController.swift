@@ -10,10 +10,20 @@ import UIKit
 class PokemonTableViewController: UITableViewController {
     @IBOutlet var pokemonTableView: UITableView!
     var pokemonResults: [PokemonResults] = []
+    var pokemon: [Pokemon] = []
+    var pokemonNames:[String] = []
+//    var pokemonName: [Pokemon.results.name] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         getPokemon()
+    }
+    
+    func getNames() {
+        for i in self.pokemon {
+            self.pokemonNames.append(i.name)
+            print("line 46 pokemonNames \(self.pokemonNames)")
+        }
     }
     
     func getPokemon() {
@@ -24,18 +34,23 @@ class PokemonTableViewController: UITableViewController {
             print("no data found")
             return
           }
+            let group = DispatchGroup()
+            group.enter()
           do {
             let results = try JSONDecoder().decode(PokemonResults.self, from: data)
-            self.pokemonResults.append(results)
-            print(" & the pokemonResults are \(self.pokemonResults)")
-            print("pokemonResults.count return \(self.pokemonResults.count)")
+            self.pokemon.append(contentsOf: results.results)
+            print("var pokemon\(self.pokemon)")
+            print("pokemon.count returns \(self.pokemonResults)")
+            self.getNames()
           } catch {
             print("There was an error")
+            group.leave()
           }
         }.resume()
     }
-    
+
     // MARK: - Table view data source
+
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -44,17 +59,19 @@ class PokemonTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return pokemonResults.count
+        print(self.pokemonNames.count)
+        return 20
     }
-    
+  
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-//        cell.textLabel?.text = self.pokemonResults[indexPath.row]
+//        cell.textLabel?.text = self.pokemonNames[indexPath.row]
+        cell.textLabel?.text = "My Quote"
         return cell
     }
 
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedPokemon = pokemonResults[indexPath.row]
+        let selectedPokemon = self.pokemonNames[indexPath.row]
         performSegue(withIdentifier: "moveToPokemonDetail", sender: selectedPokemon)
     }
         

@@ -13,6 +13,12 @@ struct PokemonResults: Decodable {
 struct Pokemon: Decodable {
   let name: String
   let url: URL
+    
+//    init(from decoder: Decoder) throws {
+//        let container
+//    }
 }
+
+
 
 
